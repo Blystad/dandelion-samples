@@ -30,11 +30,11 @@
 
 package com.github.dandelion.jsp;
 
-import com.github.dandelion.core.asset.wrapper.DelegateContent;
+import com.github.dandelion.core.asset.wrapper.impl.DelegatedContent;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class AlertIPDelegateContent implements DelegateContent {
+public class AlertIPDelegateContent implements DelegatedContent {
     @Override
     public String getContent(HttpServletRequest request) {
 	    return "alert('x-forwarded-for=" + request.getHeader("x-forwarded-for") + "');";

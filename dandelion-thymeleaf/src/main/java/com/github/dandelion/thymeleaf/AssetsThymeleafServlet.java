@@ -31,7 +31,7 @@
 package com.github.dandelion.thymeleaf;
 
 import com.github.dandelion.core.asset.web.AssetsRequestContext;
-import com.github.dandelion.core.asset.wrapper.DelegateLocationWrapper;
+import com.github.dandelion.core.asset.wrapper.impl.DelegatedLocationWrapper;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.WebContext;
 
@@ -51,7 +51,7 @@ public class AssetsThymeleafServlet extends HttpServlet {
 	AssetsRequestContext.get(req)
 		.addScopes("scope1,scope2")
 		.addScopes("delegateContentIP")
-		.addParameter("ip", DelegateLocationWrapper.DELEGATE_CONTENT_PARAM, new AlertIPDelegateContent());
+		.addParameter("ip", DelegatedLocationWrapper.DELEGATED_CONTENT_PARAM, new AlertIPDelegateContent());
 
 	resp.setContentType("text/html;charset=UTF-8");
 	resp.setHeader("Pragma", "no-cache");

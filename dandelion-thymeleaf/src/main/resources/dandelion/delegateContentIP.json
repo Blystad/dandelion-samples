@@ -2,7 +2,7 @@
     "assets": [
         {
             "locations": {
-                "delegate": "your-ip.js"
+                "delegated": "your-ip.js"
             }, 
             "name": "ip", 
             "type": "js", 

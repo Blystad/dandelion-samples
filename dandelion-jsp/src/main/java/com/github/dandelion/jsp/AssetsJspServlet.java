@@ -31,7 +31,7 @@
 package com.github.dandelion.jsp;
 
 import com.github.dandelion.core.asset.web.AssetsRequestContext;
-import com.github.dandelion.core.asset.wrapper.DelegateLocationWrapper;
+import com.github.dandelion.core.asset.wrapper.impl.DelegatedLocationWrapper;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -49,7 +49,7 @@ public class AssetsJspServlet extends HttpServlet {
 	AssetsRequestContext.get(req)
 		.addScopes("scope1,scope2")
 		.addScopes("delegateContentIP")
-		.addParameter("ip", DelegateLocationWrapper.DELEGATE_CONTENT_PARAM, new AlertIPDelegateContent());
+		.addParameter("ip", DelegatedLocationWrapper.DELEGATED_CONTENT_PARAM, new AlertIPDelegateContent());
 	// go to the jsp
 	getServletContext().getRequestDispatcher("/WEB-INF/pages/assets.jsp").forward(req, resp);
     }
