@@ -32,6 +32,11 @@
         </dependency>
         <dependency>
             <groupId>com.github.dandelion</groupId>
+            <artifactId>dandelion-servlet3</artifactId>
+            <version>${dandelion.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.dandelion</groupId>
             <artifactId>webanalytics-thymeleaf</artifactId>
             <version>${dandelion.webanalytics.version}</version>
             <exclusions>
